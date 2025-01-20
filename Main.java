@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main{
-
+//Instancia de la clase licuadora
     Licuadora licuadora = new Licuadora();
 
     
@@ -36,7 +36,7 @@ public class Main{
                     licuadora.consultarVelocidad();
                     break;
                 case 5:
-                    licuadora.consultarCapacidad();
+                    licuadora.consultarLlenado();
                     break;
                 case 6:
                     licuadora.vaciar();

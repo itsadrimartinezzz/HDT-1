@@ -43,3 +43,27 @@ public class Licuadora implements Interfaz {
             System.out.println("La velocidad ya está en su máximo nivel.");
         }
     }
+
+    @Override
+    public int consultarVelocidad() {
+        System.out.println("La velocidad actual es: " + velocidad);
+        return velocidad;
+    }
+
+    @Override
+    public boolean consultarLlenado() {
+        System.out.println("La licuadora está " + (llena ? "llena." : "vacía."));
+        return llena;
+    }
+
+    @Override
+    public void vaciar() {
+        if (llena) {
+            llena = false;
+            velocidad = 0;
+            System.out.println("La licuadora se ha vaciado.");
+        } else {
+            System.out.println("La licuadora ya está vacía.");
+        }
+    }
+}
