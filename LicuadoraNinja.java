@@ -1,7 +1,7 @@
 /**
  * Implementación de la licuadora con lógica de negocio mejorada
  */ 
-// f+atima 
+// 
 public class LicuadoraNinja implements Interfaz {
     private int velocidad;
     private boolean encendido;
