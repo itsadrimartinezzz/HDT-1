@@ -1,14 +1,33 @@
+/**
+ * Clase que simula una licuadora con funcionalidades básicas.
+ * Implementa la interfaz {@link Interfaz}.
+ */
 public class Licuadora implements Interfaz {
 
+
+/**
+ *Atributos privados que representan el estado de la licuadora.
+ */
+
+    
     private boolean encendida;
     private boolean llena;
     private int velocidad;
+
+    /**
+     * Constructor de la clase Licuadora.
+     * Inicializa la licuadora apagada, vacía y con velocidad 0.
+     */
 
     public Licuadora() {
         this.encendida = false;
         this.llena = false;
         this.velocidad = 0;
     }
+   
+    /**
+     * Enciende la licuadora. Si ya está encendida, muestra un mensaje.
+     */
 
     @Override
     public void encender() {
@@ -20,6 +39,11 @@ public class Licuadora implements Interfaz {
         }
     }
 
+    
+    /**
+     * Llena la licuadora. Si ya está llena, muestra un mensaje.
+     */
+
     @Override
     public void llenar() {
         if (!llena) {
@@ -30,6 +54,12 @@ public class Licuadora implements Interfaz {
         }
     }
 
+/**
+     * Incrementa la velocidad de la licuadora en una unidad.
+     * Valida que no se pueda aumentar la velocidad si está apagada, vacía,
+     * o si ya está en la velocidad máxima.
+     */
+    
     @Override
     public void aumentarVelocidad() {
         if (!encendida) {
@@ -44,18 +74,39 @@ public class Licuadora implements Interfaz {
         }
     }
 
+
+ /**
+     * Consulta la velocidad actual de la licuadora.
+     *
+     * @return La velocidad actual como un número entero.
+     */
+    
     @Override
     public int consultarVelocidad() {
         System.out.println("La velocidad actual es: " + velocidad);
         return velocidad;
     }
 
+
+        /**
+     * Consulta si la licuadora está llena.
+     *
+     * @return {@code true} si está llena, {@code false} si está vacía.
+     */
+  
     @Override
     public boolean consultarLlenado() {
         System.out.println("La licuadora está " + (llena ? "llena." : "vacía."));
         return llena;
     }
 
+
+        /**
+     * Vacía la licuadora. Reinicia la velocidad a 0.
+     * Si ya está vacía, muestra un mensaje.
+     */
+
+    
     @Override
     public void vaciar() {
         if (llena) {
